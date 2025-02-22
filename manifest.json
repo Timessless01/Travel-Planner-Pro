@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "TabSaver Pro",
+  "version": "5.0",
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "icons/icon.png"
+  },
+  "permissions": ["tabs", "storage", "identity"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://extensionpay.com/*"],
+      "js": ["lib/extpay.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "icons": {
+    "128": "icons/icon.png"
+  }
+}

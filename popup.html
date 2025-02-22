@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Header -->
+    <header class="app-header">
+      <h1>TabSaver <span class="gradient-text">Pro</span></h1>
+      <button id="addTabs" class="btn-primary">
+        <i class="fas fa-plus"></i> Add Tabs
+      </button>
+    </header>
+
+    <!-- Tabs List -->
+    <div id="tabsList" class="tabs-list">
+      <div class="empty-state">
+        <i class="fas fa-cloud-arrow-up"></i>
+        <h3>No Tabs Saved</h3>
+        <p>Click "Add Tabs" to save your current session</p>
+      </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay">
+      <div class="spinner"></div>
+    </div>
+  </div>
+
+  <script src="lib/extpay.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
